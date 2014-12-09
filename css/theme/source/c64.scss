@@ -1,0 +1,81 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific ../../lib/font
+@font-face {
+	font-family: "c64font";
+	src: url("../../lib/font/C64_Pro-STYLE.eot");
+	src: url("../../lib/font/C64_Pro-STYLE.eot?#iefix") format("embedded-opentype"),
+		 url("../../lib/font/C64_Pro-STYLE.woff") format("woff"),
+		 url("../../lib/font/C64_Pro-STYLE.ttf") format("truetype"),
+		 url("../../lib/font/C64_Pro-STYLE.svg") format("svg");
+}
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// c64 color palette
+$c64_black: #000000;
+$c64_white: #FFFFFF;
+$c64_red: #68372B;
+$c64_cyan: #70A4B2;
+$c64_purple: #6F3D86;
+$c64_green: #588D43;
+$c64_blue: #352879;
+$c64_yellow: #B8C76F;
+$c64_orange: #6F4F25;
+$c64_brown: #433900;
+$c64_light_red: #9A6759;
+$c64_dark_grey: #444444;
+$c64_grey: #6C6C6C;
+$c64_light_green: #9AD284;
+$c64_light_blue: #6C5EB5;
+$c64_light_grey: #959595;
+
+// Override theme settings (see ../template/settings.scss)
+
+$headingFont: 'c64font', sans-serif;
+$mainFont: monospace;
+$headingLineHeight: 1.2;
+$mainColor: $c64_light_grey;
+$headingColor: $c64_light_blue;
+$headingTextShadow: $c64_light_grey;
+$backgroundColor: $c64_blue;
+$linkColor: $c64_light_grey;
+$linkColorHover: lighten( $linkColor, 20%);
+$selectionBackgroundColor: $c64_light_grey;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal blockquote {
+	background-color: $c64_light_blue;
+	color: $c64_blue;
+}
+
+.reveal pre code {
+	background-color: $c64_light_blue;
+}
